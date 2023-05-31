@@ -11,7 +11,7 @@ namespace HomeApi.Contracts.Validation
             RuleFor(x => x.NewName)
                 .NotEmpty()
                 .Must(BeSupportedRooms)
-                .WithMessage($"Поддерживаются следующие типы коинат {string.Join(", ", Values.ValidRooms)}");
+                .WithMessage($"Поддерживаются следующие коинаты {string.Join(", ", Values.ValidRooms)}");
             RuleFor(x => x.NewArea).NotEmpty();
             RuleFor(x => x.NewGasConnected).NotEmpty();
             RuleFor(x => x.NewVoltage)
